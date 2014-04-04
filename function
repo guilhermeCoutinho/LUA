@@ -1,0 +1,25 @@
+function primo (n)
+  local array = {}
+  local index = 1
+  array[index] = 2
+  index = index + 1
+  for i=3,n do
+    local ehprimo = true
+      for j=2,i/2 do
+	if i%j == 0  then
+	  ehprimo = false
+	end
+      end
+    if ehprimo == true then
+      array[index] = i
+      index = index + 1
+    end
+  end
+  return array
+end
+
+vetor = primo(15)
+
+for k, v in pairs(vetor) do
+  print(k, v)
+end
