@@ -7,15 +7,11 @@ local reserva = {
 function verificaDisponibilidade( user_dia, user_inicio_string , user_termino_string  )
 
 	local isDisponivel = true
-	local user_inicio_hora
-	local user_inicio_minuto
-	local user_termino_minuto
-	local user_termino_hora
-
-	user_inicio_hora = string.sub(user_inicio_string , 1 , 2)
-	user_inicio_minuto = string.sub (user_inicio_string , 4 , 5)
-	user_termino_hora = string.sub ( user_termino_string , 1 ,2 )
-	user_termino_minuto = string.sub ( user_termino_string , 4 , 5)
+	
+	local user_inicio_hora  = string.sub(user_inicio_string , 1 , 2)
+	local user_inicio_minuto  = string.sub (user_inicio_string , 4 , 5)
+	local user_termino_minuto  = string.sub ( user_termino_string , 1 ,2 )
+	local user_termino_hora = string.sub ( user_termino_string , 4 , 5)
 	
 
 	local horario_pendente_inicio = (user_inicio_hora) * 60 + (user_inicio_minuto)
