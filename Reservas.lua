@@ -49,9 +49,10 @@ function start ( )
 
 	if ( user_dia == '0' ) then
 		for i,v in ipairs(reserva.dia) do
-			print(">", v , 
-				"\n\t|" , reserva.inicio[i],
-				"-" , reserva.termino[i])
+			io.write(">  ", v , 
+				"\n  | " , reserva.inicio[i],
+				" - " , reserva.termino[i],
+				"\n" )
 		end
 	else
 		io.write("Inicio: ")
